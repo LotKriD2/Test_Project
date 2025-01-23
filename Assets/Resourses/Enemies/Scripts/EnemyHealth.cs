@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] GameController _gameController;
     [SerializeField] float _maxHealth = 100.0f;
     private float _currentHealth;
     [SerializeField] Slider _healthBar;
-    public float MaxHealth
-    {
-        get => _maxHealth;
-    }
+
     public float CurrentHealth
     {
         get => _currentHealth;
@@ -20,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         _currentHealth = _maxHealth;
         UpdateHealthBar();
     }
@@ -36,15 +35,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void UpdateHealthBar()
+    void UpdateHealthBar()
     {
         _healthBar.value = _currentHealth / _maxHealth;
     }
 
     void Die()
     {
-        PlayerRespawn playerRespawn = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerRespawn>();
-        playerRespawn.DeathPlayer();
-        UpdateHealthBar();
+        _gameController.DeathEnemy();
+        GetComponent<EnemyDrop>().DropLoot();
+        Destroy(gameObject);
     }
 }

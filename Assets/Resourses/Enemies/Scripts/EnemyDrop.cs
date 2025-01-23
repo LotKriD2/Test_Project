@@ -13,9 +13,4 @@ public class EnemyDrop : MonoBehaviour
 
         Instantiate(selectedItem, transform.position, Quaternion.identity);
     }
-
-    private void OnDestroy()
-    {
-        DropLoot();
-    }
 }

@@ -37,22 +37,25 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Resourses\Player\Scripts\PlayerShoot.cs" />
+     <Compile Include="Assets\Resourses\Game\Scripts\SaveController.cs" />
      <Compile Include="Assets\Resourses\Player\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Resourses\Items\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Resourses\Items\Scripts\ColectibleItem.cs" />
      <Compile Include="Assets\Resourses\Enemies\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Resourses\Game\Scripts\Joystick.cs" />
      <Compile Include="Assets\Resourses\Game\Scripts\InventoryUI.cs" />
+     <Compile Include="Assets\Resourses\Game\Scripts\GameController.cs" />
+     <Compile Include="Assets\Resourses\Game\Scripts\SaveSystem.cs" />
      <Compile Include="Assets\Resourses\Items\Scripts\Item.cs" />
      <Compile Include="Assets\Resourses\Player\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Resourses\Game\Scripts\CameraMove.cs" />
-     <Compile Include="Assets\Resourses\Game\Scripts\GameController.cs" />
-     <Compile Include="Assets\Resourses\Game\Scripts\SaveController.cs" />
-     <Compile Include="Assets\Resourses\Enemies\Scripts\EnemyDrop.cs" />
-     <Compile Include="Assets\Resourses\Items\Scripts\ColectibleItem.cs" />
-     <Compile Include="Assets\Resourses\Player\Scripts\Inventory.cs" />
      <Compile Include="Assets\Resourses\Game\Scripts\PlayerRespawn.cs" />
+     <Compile Include="Assets\Resourses\Enemies\Scripts\EnemyDrop.cs" />
+     <Compile Include="Assets\Resourses\Game\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Resourses\Game\Scripts\GameData.cs" />
-     <Compile Include="Assets\Resourses\Game\Scripts\SaveSystem.cs" />
+     <Compile Include="Assets\Resourses\Player\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Resourses\Enemies\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Resourses\Player\Scripts\PlayerAnimationController.cs" />
+     <Compile Include="Assets\Resourses\Enemies\Scripts\EnemyAnimationController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>G:\Unity\2021.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

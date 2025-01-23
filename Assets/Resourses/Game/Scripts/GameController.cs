@@ -12,7 +12,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         SpawnEnemies();
-        GetComponent<SaveController>().Load();
     }
 
     void SpawnEnemies()

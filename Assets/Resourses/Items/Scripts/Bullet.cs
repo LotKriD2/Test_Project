@@ -10,11 +10,11 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+            EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
             if (enemy != null)
             {
                 enemy.TakeDamage(_damage);
-            }
+            }          
 
             Destroy(gameObject);
         }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
-    private Animator _animator;
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] Transform _firePoint;
     [SerializeField] float _bulletSpeed = 10.0f;
@@ -31,7 +30,6 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
         UpdateAmmoUI();
     }
 
@@ -63,7 +61,7 @@ public class PlayerShoot : MonoBehaviour
         }
     }
 
-    void UpdateAmmoUI()
+    public void UpdateAmmoUI()
     {
         _ammoText.text = "Пули: " + _currentAmmo.ToString() + "/" + _maxAmmo.ToString();
     }
